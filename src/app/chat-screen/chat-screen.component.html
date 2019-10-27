@@ -1,0 +1,19 @@
+<h2>C.H.A.R.L.O.T.T.E</h2>
+
+<div class="container">
+    <p>Hello. How are you today?</p>
+    <span class="time-right">11:00</span>
+</div>
+
+<div class="container darker">
+    <p>Hey! I'm fine. Thanks for asking!</p>
+    <span class="time-left">11:01</span>
+</div>
+
+<div class="chat-message clearfix">
+    <form #f="ngForm" [formGroup]="myForm">
+        <input type="text" name="message" id="message" placeholder="Type your message"
+            [formControl]="myForm.get('message')">
+        <button (click)="onClickSubmit(myForm.value)">Send</button>
+    </form>
+</div>
